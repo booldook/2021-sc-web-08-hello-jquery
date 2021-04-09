@@ -1,5 +1,46 @@
-# jQuery 메서드 - 143개의 메서드
+# jQuery 메서드 - 종류별 분류
 
+## Selector(선택자)
+- $('대상') : css 선택자를 그대로 따른다.
+- children(), find(), parent(), parents(), prev(), next(), siblings()
+- index(), eq()
+- each() : 반복문
+
+## Event
+- on()
+- mouse: click(), mouseover(), mouseenter(), mouseleave(), wheel()
+- keyboard: keyup(), keydown(),
+- window: resize(), scroll()
+- form: submit(), reset()
+
+## Animation
+- show(), hide(), toggle()
+- fadeIn(), fadeOut(), fadeToggle()
+- slideDown(), slideUp(), slideToggle()
+- animate()
+
+## DOM - HTML 관리
+- empty(), remove()
+- append(), appendTo(), prepend(), prependTo()
+- html(), text()
+- val()
+- attr()
+
+## CSS - CSS 관리
+- css()
+- addClass(), removeCalss(), toggleClass(), hasClass()
+
+## Dimension
+- width(), innerWidth(), outerWidth(), outerWidth(true) 
+- height(), innerHeight(), innerWidth(), innerWidth(true)
+
+## 통신Ajax(Asynchronous javascript and xml)
+- $.get(), $.post(), $.ajax()
+
+
+
+
+# jQuery 메서드 - 143개의 메서드
 
 ## add: ƒ (e,t)
 ### 설명: 
