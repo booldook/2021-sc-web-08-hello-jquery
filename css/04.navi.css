@@ -1,0 +1,13 @@
+.wrapper {width: 1000px; margin: auto;}
+.header-wrapper {background-color: #222; color: #f9f9f9; position: relative;}
+.header-wrapper > .logo {float: left;}
+.header-wrapper a,
+.header-wrapper span {display: inline-block; width: 100%; padding: 1em; cursor: pointer;}
+
+.header-wrapper > .navi-wrapper {float: right;}
+.header-wrapper > .navi-wrapper > .navi {float: left; width: 160px;}
+
+.header-wrapper > .sub-wrapper {position: absolute; top: 48px; left: 0; background-color: #222; width: 100%;}
+.header-wrapper > .sub-wrapper .sub-wraps {width: 480px; margin-left: auto;}
+.header-wrapper > .sub-wrapper .sub-wrap {width: 33.3333%; float: left;}
+.header-wrapper > .sub-wrapper .sub:hover {background-color: bisque; color: #222;}
