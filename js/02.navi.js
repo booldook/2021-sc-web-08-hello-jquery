@@ -20,7 +20,9 @@ function onNaviClick() {
 		$(this).parents('header'),
 		$(this).prev(),
 		$(this).next(),
-		$(this).siblings()
+		$(this).siblings(),
+		$(this).parent().children('.sub'),
+		$(this).parent().find('.sub'),
 	)
 	// $(this).next().stop().slideToggle(300)
 	$(this).parent().find('.sub-wrap').stop().slideToggle(300)
