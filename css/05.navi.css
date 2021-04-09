@@ -1,0 +1,12 @@
+.wrapper {width: 1000px; margin: auto;}
+.header-wrapper {width: 160px; height: 100vh; background-color: #222; color: #f9f9f9; float: left;}
+.body-wrapper {width: 840px; height: 100vh; border-right: 1px solid #ccc; float: right;}
+h2.title {font-size: 2em; padding: 1.5em 0; text-align: center; }
+
+.header-wrapper > .logo {margin-bottom: 3em;}
+.header-wrapper a, .header-wrapper span {display: inline-block; width: 100%; padding: 1em; cursor: pointer;}
+.header-wrapper span {background-color: #333;}
+.header-wrapper .sub {color: #aaa;}
+.header-wrapper .sub:hover {background-color: bisque; color: #222;}
+
+
