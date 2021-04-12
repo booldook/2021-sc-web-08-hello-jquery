@@ -25,8 +25,41 @@
 			<h1 class="h1">윈도우 팝업 / 모달 팝업</h1>
 		</div>
 		<div class="bt-wrap text-center">
-			<button class="btn btn-primary bt-win">윈도우 팝업</button>
-			<button class="btn btn-success bt-modal">모달 팝업</button>
+			<div class="py-2">
+				<a href="./07.window-popup.html" target="_self" class="btn btn-primary">
+					현재창 링크(A tag)
+				</a>
+				<a href="./07.window-popup.html" target="_blank" class="bt-win btn btn-primary">
+					새창 링크(A tag)
+				</a>
+			</div>
+			<div class="py-2">
+				<button class="bt-link btn btn-info text-white">
+					현재창 링크(javascript: location.href)
+				</button>
+				<button class="bt-win btn btn-info text-white">
+					새창 링크(javascript: window.open)
+				</button>
+				<button class="bt-popup btn btn-info text-white">
+					팝업 링크(javascript: window.open)
+				</button>
+			</div>
+			<div class="py-2">
+				<button class="bt-modal btn btn-success">모달 팝업</button>
+			</div>
+		</div>
+	</div>
+	<div class="modal-wrapper">
+		<div class="modal-wrap">
+			<div class="modals">
+				<h2 class="title h2">모달창 제목</h2>
+				<div class="content">
+					모달 내용입니다.
+				</div>
+				<div class="footer">
+					<button class="bt-close btn btn-danger">닫기</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="../js/07.popup.js"></script>

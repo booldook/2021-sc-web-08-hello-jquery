@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>윈도우 팝업</title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<script src="../js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div class="container text-center">
+		<h1 class="my-5">윈도우 팝업</h1>
+		<button class="bt-close btn btn-danger">윈도우 닫기</button>
+	</div>
+	<script>
+		$('.bt-close').on('click', onClose)
+		function onClose() {
+			// window.close()
+			self.close()
+		}
+	</script>
+</body>
+</html>
