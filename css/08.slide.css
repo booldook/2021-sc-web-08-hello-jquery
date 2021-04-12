@@ -1,8 +1,8 @@
-.bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 99;}
+.bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
 .bt-angle:hover {opacity: 1;}
 .bt-angle.bt-prev {left: 0;}
 .bt-angle.bt-next {right: 0;}
 
 .slide-stage {position: relative;}
-.slide-stage > .slide-wrap {position: relative;}
+.slide-stage > .slide-wrap {position: relative; z-index: 1;}
 .slide-stage > .slide-wrap > .slide {position: absolute; width: 100%; z-index: 1;}
