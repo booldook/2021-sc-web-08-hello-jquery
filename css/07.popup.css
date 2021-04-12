@@ -1,1 +1,8 @@
 .modal-wrapper {width: 100%; height: 100vh; background-color: rgba(0, 0, 0, .7); position: fixed; top: 0; left: 0;}
+.modal-wrapper .modal-out-wrap {display: table; width: 100%; height: 100%;}
+.modal-wrapper .modal-out-wrap .modal-in-wrap {display: table-cell; text-align: center; vertical-align: middle;}
+.modal-wrapper .modal-out-wrap .modal-in-wrap .modal-wrap {background-color: #fff; display: inline-block; position: relative; min-width: 400px;}
+.modal-wrapper .title {padding: 1.5em 1em 0.5em 1em;}
+.modal-wrapper .content {padding: 1.5em; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.modal-wrapper .bt-close2 {padding: .5em .75em; font-size: 1.25em; background-color: #dc3545; color: #f9f9f9; cursor: pointer; position: absolute; top: 0; right: 0;}
+.modal-wrapper .footer {padding: 1em;}
