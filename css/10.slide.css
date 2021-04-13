@@ -1,0 +1,33 @@
+/********************** 글로벌 설정 *********************/
+
+
+/********************** 슬라이드 *********************/
+.slide-stage {position: relative; border: 5px solid black; overflow: hidden;}
+.bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
+.bt-angle:hover {opacity: 1;}
+.bt-angle.bt-prev {left: 0;}
+.bt-angle.bt-next {right: 0;}
+
+.slide-wrap {position: absolute; width: 100%;}
+
+
+/********************** 반응형 설정 *********************/
+@media (max-width: 1400px) {
+	
+}
+
+@media (max-width: 1200px) {
+	
+}
+
+@media (max-width: 992px) {
+	
+}
+
+@media (max-width: 768px) {
+	
+}
+
+@media (max-width: 576px) {
+	
+}
