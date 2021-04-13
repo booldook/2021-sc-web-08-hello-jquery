@@ -42,3 +42,56 @@ $('.bt-slide-up').on('click', function() {
 $('.bt-slide-toggle').on('click', function() {
 	$('.hero').slideToggle()
 })
+
+// $('대상').stop().animate({애니메이션}, 속도, 타입, 콜백)
+// 속도: Number 	- ms
+// 타입: String 	- 'swing', 'linear'
+// 콜백: Function - 애니메이션이 끝난 후 작동할 동작
+/*
+backgroundPositionX
+backgroundPositionY
+borderWidth
+borderBottomWidth
+borderLeftWidth
+borderRightWidth
+borderTopWidth
+borderSpacing
+margin
+marginBottom
+marginLeft
+marginRight
+marginTop
+opacity
+outlineWidth
+padding
+paddingBottom
+paddingLeft
+paddingRight
+paddingTop
+height
+width
+maxHeight
+maxWidth
+minHeight
+minWidth
+fontSize
+bottom
+left
+right
+top
+letterSpacing
+wordSpacing
+lineHeight
+textIndent
+*/
+$('.bt-animate').on('click', function() {
+	$('.hero').stop().animate({'margin-left':'860px','margin-top':0}, 1000, function() { 
+		$(this).animate({'margin-left':'860px','margin-top':'200px'}, 500, function() {
+			$(this).animate({'margin-left':0,'margin-top':'200px'}, 1000, function() {
+				$(this).animate({'margin-left':0,'margin-top':0}, 500, function() {
+					alert('Animation 종료')
+				})
+			})
+		})
+	})
+})
