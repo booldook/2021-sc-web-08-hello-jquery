@@ -2,11 +2,14 @@
 
 
 /********************** 슬라이드 *********************/
-.slide-stage {position: relative;}
+.slide-stage {position: relative; /* overflow: hidden; */}
 .bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
 .bt-angle:hover {opacity: 1;}
 .bt-angle.bt-prev {left: 0;}
 .bt-angle.bt-next {right: 0;}
+
+.slide-wrap {position: relative; width: 500%;}
+.slide-wrap > .slide {width: 20%; float: left;}
 
 
 /********************** 반응형 설정 *********************/
