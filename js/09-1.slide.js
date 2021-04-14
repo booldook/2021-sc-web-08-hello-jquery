@@ -40,6 +40,7 @@ function init() {
 function ani() {
 	$pager.removeClass('active')
 	$pager.eq(idx).addClass('active')
+	if(idx === slideLastIdx) $pager.eq(0).addClass('active')
 	$slideWrap.stop().animate({'left': -idx * 100 + '%'}, aniSpeed)
 }
 
