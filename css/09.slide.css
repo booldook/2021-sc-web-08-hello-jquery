@@ -11,6 +11,10 @@
 .slide-wrap {position: relative;}
 .slide-wrap > .slide {float: left;}
 
+.pager-wrap {position: absolute; z-index: 2; left: 50%; bottom: 10px; transform: translateX(-50px)}
+.pager-wrap > .pager {margin: .25em; cursor: pointer; color: #bbb;}
+.pager-wrap > .pager.active {color: #0bc578;}
+
 
 /********************** 반응형 설정 *********************/
 @media (max-width: 1400px) {

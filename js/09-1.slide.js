@@ -27,9 +27,17 @@ function init() {
 	slideLastIdx = slideLen - 1
 	$slideWrap.css('width', slideLen * 100 + '%')
 	$slide.css('width', 100/slideLen + '%')
+	
+	var html = '<i class="pager fa fa-circle"></i>'
+	for(var i=0; i<slideLastIdx; i++) $pagerWrap.append(html)
+	$pager = $pagerWrap.find('.pager')
+	$pager.click(onPagerClick)
+	$pager.eq(idx).addClass('active')
 }
 
 function ani() {
+	$pager.removeClass('active')
+	$pager.eq(idx).addClass('active')
 	$slideWrap.stop().animate({'left': -idx * 100 + '%'}, aniSpeed)
 }
 
@@ -40,6 +48,11 @@ $slideStage.find('.bt-next').click(onNextClick)
 
 
 /*************** 이벤트 콜백 *****************/
+function onPagerClick() {
+	idx = $(this).index()
+	ani()
+}
+
 function onPrevClick() {
 	if(idx === 0) {
 		$slideWrap.css('left', -(slideLastIdx * 100) + '%')
