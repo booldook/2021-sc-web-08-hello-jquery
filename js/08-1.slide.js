@@ -36,7 +36,6 @@ function init() {
 
 	$slide.eq(idx).css('z-index', zIdx++)
 	$pager.eq(idx).addClass('active')
-
 	interval = setInterval(onNextClick, intervalGap)
 }
 
