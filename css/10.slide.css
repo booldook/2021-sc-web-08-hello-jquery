@@ -2,7 +2,7 @@
 
 
 /********************** 슬라이드 *********************/
-.slide-stage {position: relative; border: 5px solid black; overflow: hidden;}
+.slide-stage {position: relative; border: 5px solid black; /* overflow: hidden; */}
 .bt-angle {font-size: 6em; position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; color: #fff; opacity: .3; transition: all .5s; z-index: 2;}
 .bt-angle:hover {opacity: 1;}
 .bt-angle.bt-prev {left: 0;}
@@ -10,7 +10,7 @@
 
 .slide-wrap {position: absolute; width: 100%;}
 
-.pager-wrap {position: absolute; z-index: 2; left: 50%; bottom: 10px; transform: translateX(-50px)}
+.pager-wrap {position: absolute; z-index: 3; left: 50%; bottom: 10px; transform: translateX(-50px)}
 .pager-wrap > .pager {margin: .25em; cursor: pointer; color: #bbb;}
 .pager-wrap > .pager.active {color: #0bc578;}
 
