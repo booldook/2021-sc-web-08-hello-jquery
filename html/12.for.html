@@ -1,0 +1,49 @@
+<script>
+	var arr = ['A', 'B', 'C', 'D', 'E']
+	var html, v, i
+	
+
+	html = ''
+	for(i=0; i<arr.length; i++) {
+		html += arr[i]
+	}
+	console.log(html)
+	
+
+	html = ''
+	for(i in arr) {
+		html += arr[i]
+	}
+	console.log(html)
+	
+
+	html = ''
+	for(v of arr) {
+		html += v
+	}
+	console.log(html)
+
+
+	html = ''
+	arr.forEach(function(v, i) {
+		html += v
+	})
+	console.log(html)
+
+
+	i = 0
+	html = ''
+	while(i<arr.length) {
+		html += arr[i]
+		i++
+	}
+	console.log(html)
+
+	
+	html = ''
+	arr.map(function(v, i) {
+		html += v
+		return v
+	})
+	console.log(html)
+</script>
