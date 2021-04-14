@@ -36,7 +36,7 @@ $slideStage.find('.bt-next').click(onNextClick)
 
 
 /*************** 이벤트 콜백 *****************/
-function onPagerClick() {
+function onPrevClick() {
 
 }
 
