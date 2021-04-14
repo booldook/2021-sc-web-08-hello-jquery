@@ -12,6 +12,7 @@ var $pagerWrap							// $('.slide-stage .pager-wrap')
 var $pager									// $('.slide-stage .pager')
 init()
 
+
 /*************** 사용자 함수 *****************/
 function init() {
 	idx = 0
