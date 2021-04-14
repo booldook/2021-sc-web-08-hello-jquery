@@ -3,6 +3,10 @@
 .bt-angle.bt-prev {left: 0;}
 .bt-angle.bt-next {right: 0;}
 
-.slide-stage {position: relative;}
+.slide-stage {position: relative; border: 3px solid black;}
 .slide-stage > .slide-wrap {position: relative; z-index: 1;}
 .slide-stage > .slide-wrap > .slide {position: absolute; width: 100%; z-index: 1;}
+
+.pager-wrap {position: absolute; z-index: 2; left: 50%; bottom: 10px; transform: translateX(-50px)}
+.pager-wrap > .pager {margin: .25em; cursor: pointer; color: #bbb;}
+.pager-wrap > .pager.active {color: #0bc578;}
