@@ -29,6 +29,10 @@ function init() {
 	$slide.css('width', 100/slideLen + '%')
 }
 
+function ani() {
+	$slideWrap.stop().animate({'left': -idx * 100 + '%'}, aniSpeed)
+}
+
 
 /*************** 이벤트 등록 *****************/
 $slideStage.find('.bt-prev').click(onPrevClick)
@@ -37,9 +41,19 @@ $slideStage.find('.bt-next').click(onNextClick)
 
 /*************** 이벤트 콜백 *****************/
 function onPrevClick() {
-
+	if(idx === 0) {
+		$slideWrap.css('left', -(slideLastIdx * 100) + '%')
+		idx = slideLastIdx - 1
+	}
+	else idx--
+	ani()
 }
 
 function onNextClick() {
-	
+	if(idx === slideLastIdx) {
+		$slideWrap.css('left', 0)
+		idx = 1
+	}
+	else idx++
+	ani()
 }
