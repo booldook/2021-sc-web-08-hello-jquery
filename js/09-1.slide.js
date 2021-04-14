@@ -27,12 +27,14 @@ function init() {
 	slideLastIdx = slideLen - 1
 	$slideWrap.css('width', slideLen * 100 + '%')
 	$slide.css('width', 100/slideLen + '%')
-	
+
 	var html = '<i class="pager fa fa-circle"></i>'
 	for(var i=0; i<slideLastIdx; i++) $pagerWrap.append(html)
 	$pager = $pagerWrap.find('.pager')
 	$pager.click(onPagerClick)
 	$pager.eq(idx).addClass('active')
+
+	interval = setInterval(onNextClick, intervalGap)
 }
 
 function ani() {
@@ -45,6 +47,8 @@ function ani() {
 /*************** 이벤트 등록 *****************/
 $slideStage.find('.bt-prev').click(onPrevClick)
 $slideStage.find('.bt-next').click(onNextClick)
+// $slideStage.mouseover(onStageOver).mouseleave(onStageLeave)
+$slideStage.hover(onStageOver, onStageLeave)
 
 
 /*************** 이벤트 콜백 *****************/
@@ -69,4 +73,12 @@ function onNextClick() {
 	}
 	else idx++
 	ani()
+}
+
+function onStageOver() {
+	clearInterval(interval)
+}
+
+function onStageLeave() {
+	interval = setInterval(onNextClick, intervalGap)
 }
