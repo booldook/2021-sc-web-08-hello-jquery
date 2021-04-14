@@ -23,5 +23,6 @@
 }
 
 @media (max-width: 575px) {
-	
+	.list-wrap {width: 100%;}
+	.list-wrap > .list {width: 100%; margin-right: 0;}
 }
