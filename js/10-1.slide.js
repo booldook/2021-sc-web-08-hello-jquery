@@ -30,16 +30,54 @@ function init() {
 	for(var i=0; i<slideLastIdx; i++) $pagerWrap.append(html)
 	$pager = $pagerWrap.find('.pager')
 	$pager.click(onPagerClick)
+	$pager.eq(idx).addClass('active')
+
+	interval = setInterval(onNextClick, intervalGap)
+}
+
+function ani() {
+	$pager.removeClass('active')
+	$pager.eq(idx).addClass('active')
+	if(idx === slideLastIdx) $pager.eq(0).addClass('active')
+	$slideWrap.stop().animate({'top': -idx * 100 + '%'}, aniSpeed)
 }
 
 
-/*************** 사용자 함수 *****************/
-
-
 /*************** 이벤트 등록 *****************/
+$slideStage.find('.bt-prev').click(onPrevClick)
+$slideStage.find('.bt-next').click(onNextClick)
+$slideStage.hover(onStageOver, onStageLeave)
 
 
 /*************** 이벤트 콜백 *****************/
+// idx변경 -> ani()
 function onPagerClick() {
-	console.log('PAGER CLICK!')
+	idx = $(this).index()
+	ani()
+}
+
+function onPrevClick() {
+	if(idx === 0) {
+		$slideWrap.css('top', -slideLastIdx * 100 + '%')
+		idx = slideLastIdx - 1
+	}
+	else idx--
+	ani()
+}
+
+function onNextClick() {
+	if(idx === slideLastIdx) {
+		$slideWrap.css('top', 0)
+		idx = 1
+	}
+	else idx++
+	ani()
+}
+
+function onStageOver() {
+	clearInterval(interval)
+}
+
+function onStageLeave() {
+	interval = setInterval(onNextClick, intervalGap)
 }
