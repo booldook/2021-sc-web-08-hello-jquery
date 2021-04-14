@@ -1,0 +1,27 @@
+/********************** 글로벌 설정 *********************/
+
+
+/********************** list-wrap *********************/
+.list-wrap {width: 101%;}
+.list-wrap > .list {width: 24%; margin-right: 1%; float: left;}
+
+/********************** 반응형 설정 *********************/
+@media (max-width: 1399px) {
+	
+}
+
+@media (max-width: 1199px) {
+	
+}
+
+@media (max-width: 991px) {
+	.list-wrap > .list {width: 49%;}
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 575px) {
+	
+}
