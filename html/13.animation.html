@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../css/all.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-icons.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<style>
+		.wrapper {width: 200px; height: 300px; margin: auto; border: 1px solid red;}
+		.numbers {text-align: center;  border: 1px solid blue;}
+		.numbers.default {animation-name: ani; animation-duration: 300ms; animation-iteration-count: infinite;}
+		.numbers.stop {animation-name: ani2; animation-duration: 2s; animation-iteration-count: 1; animation-fill-mode: forwards;}
+		.number {height: 300px; line-height: 280px; font-size: 180px; color: green;}
+		
+		@keyframes ani {
+			0% {transform: translateY(0);}
+			100% {transform: translateY(-100%);}
+		}
+
+		@keyframes ani2 {
+			0% {transform: translateY(0);}
+			100% {transform: translateY(-300px);}
+		}
+	</style>
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="numbers default">
+			<div class="number">0</div>
+			<div class="number">1</div>
+			<div class="number">2</div>
+			<div class="number">3</div>
+			<div class="number">4</div>
+			<div class="number">5</div>
+			<div class="number">6</div>
+			<div class="number">7</div>
+			<div class="number">8</div>
+			<div class="number">9</div>
+		</div>
+	</div>
+	<script>
+		setTimeout(onStop, 3000)
+		function onStop() {
+			$('.numbers').removeClass('default').addClass('stop')
+		}
+	</script>
+</body>
+</html>
